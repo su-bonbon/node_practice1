@@ -1,10 +1,16 @@
-var figlet = require("figlet");
+const express = require('express')
+const app = express()
 
-figlet("SuPie", function (err, data) {
-  if (err) {
-    console.log("Something went wrong...");
-    console.dir(err);
-    return;
-  }
-  console.log(data);
-});
+app.get('/', function (req, res) {
+    res.send('Hello World')
+})
+
+app.get('/dog', function (req, res) {
+    res.send('wolf')
+})
+
+app.get('/cat', function (req, res) {
+    res.send('miya')
+})
+
+app.listen(3000)
