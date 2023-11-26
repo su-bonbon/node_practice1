@@ -1,5 +1,9 @@
 const express = require('express')
 const app = express()
+var cors = require('cors')
+
+// allow all request if ()<- is empty
+app.use(cors())
 
 app.get('/', function (req, res) {
   res.send('Hello World')
