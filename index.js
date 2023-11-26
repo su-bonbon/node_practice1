@@ -6,12 +6,15 @@ app.get('/', function (req, res) {
 })
 
 app.get('/user/:id', function (req, res) {
-  const q = req.params
+  // as a parameter
+  // const q = req.params
+  // console.log(q)
+
+  // as a query
+  const q = req.query
   console.log(q)
 
-
-
-  res.json({'sound' : 'dog dog'})
+  res.json({'userid' : q.id})
 })
 
 app.get('/cat', function (req, res) {
