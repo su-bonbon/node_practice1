@@ -7,17 +7,18 @@
 </head>
 <body>
     <h1>today's weather</h1>
+    <input type="text" class="city" value="">
     <button onclick="getWeather()">submit</button>
     <p id="temperature"></p>
     <script>
         function getWeather() {
-            fetch('https://goweather.herokuapp.com/weather/dallas')
+            let city = document.getElementById("city").value;
+            fetch('https://goweather.herokuapp.com/weather/' + city)
             .then((response) => response.json())
             .then((data) =>  {
                 document.getElementById("temperature").innerHTML = data['temperature'];
             });
         }
-
     </script>
 </body>
 </html>
