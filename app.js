@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
     res.render('index')  // ./views/index.ejs
 })
 
+app.get('/profile', (req, res) => {
+    res.render('profile')
+  })
+
 app.get('/test', (req, res) => {
     res.send('<h1>test</h1>')
   })
