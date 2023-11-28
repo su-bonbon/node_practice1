@@ -13,11 +13,19 @@ app.get('/', (req, res) => {
 
 app.get('/profile', (req, res) => {
     res.render('profile')
-  })
+})
+
+app.get('/map', (req, res) => {
+    res.render('map')
+})
+
+app.get('/contact', (req, res) => {
+    res.render('contact')
+})
 
 app.get('/test', (req, res) => {
     res.send('<h1>test</h1>')
-  })
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
